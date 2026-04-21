@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiGinet - Contacto</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: #f8fafc;
+            color: #0f172a;
+            line-height: 1.5;
+        }
+        .animated-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            background: linear-gradient(125deg, #5d5c79, #201f27, #958e9e, #88aec0);
+            background-size: 400% 400%;
+            animation: waveGradient 15s ease infinite;
+        }
+        @keyframes waveGradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+        header {
+            position: sticky;
+            top: 0;
+            backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.85);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            z-index: 10;
+            padding: 16px 0;
+        }
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .logo-img { height: 50px; width: auto; }
+        .nav-links { display: flex; gap: 32px; font-weight: 500; }
+        .nav-links a { text-decoration: none; color: #1e293b; transition: color 0.2s; }
+        .nav-links a:hover { color: #2563eb; }
+        .btn-download {
+            background: #39455f;
+            color: white;
+            border: none;
+            padding: 12px 48px;
+            border-radius: 40px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .btn-download:hover { background: #1d4ed8; transform: translateY(-2px); }
+        
+        .contacto-section {
+            padding: 80px 0;
+        }
+        .contacto-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(8px);
+            border-radius: 48px;
+            padding: 48px;
+            margin-top: 40px;
+        }
+        .info-contacto h2 {
+            font-size: 2rem;
+            margin-bottom: 32px;
+            color: #1e293b;
+        }
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 32px;
+            padding: 16px;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .info-icon {
+            font-size: 2rem;
+        }
+        .info-text h3 {
+            font-size: 1.1rem;
+            color: #64748b;
+            margin-bottom: 4px;
+        }
+        .info-text p {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #0f172a;
+        }
+        .mapa {
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .formulario-contacto h2 {
+            font-size: 2rem;
+            margin-bottom: 32px;
+            color: #1e293b;
+        }
+        .form-group {
+            margin-bottom: 24px;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 16px;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.2s;
+        }
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: #2563eb;
+        }
+        .btn-enviar {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%;
+        }
+        .btn-enviar:hover { background: #1d4ed8; }
+        footer {
+            text-align: center;
+            padding: 32px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            color: #cbd5e1;
+        }
+        @media (max-width: 768px) {
+            .contacto-grid { grid-template-columns: 1fr; padding: 24px; }
+            .header-inner { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+<div class="animated-bg"></div>
+
+<header>
+    <div class="container header-inner">
+        <img src="imagenes/logo.png" alt="DiGinet" class="logo-img">
+        <div class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="clientes.html">Clientes</a>
+            <a href="contacto.html">Contacto</a>
+        </div>
+        <button class="btn-download" id="downloadBtn">📥 Descargar TRAXER</button>
+    </div>
+</header>
+
+<main>
+    <div class="container contacto-section">
+        <h1 style="text-align: center; font-size: 3rem; background: linear-gradient(135deg, #2698da, #38d4ba); background-clip: text; -webkit-background-clip: text; color: transparent;">Contacto</h1>
+        <p style="text-align: center; color: #e2e8f0; margin-top: 16px;">Estamos para ayudarte. Contáctanos por cualquiera de nuestros canales.</p>
+        
+        <div class="contacto-grid">
+            <div class="info-contacto">
+                <h2>📌 Información de contacto</h2>
+                <div class="info-item">
+                    <div class="info-icon">🏢</div>
+                    <div class="info-text">
+                        <h3>Empresa</h3>
+                        <p>DiGinet</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">✉️</div>
+                    <div class="info-text">
+                        <h3>Correo electrónico</h3>
+                        <p>diginetconsultas@diginet.com.py</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">📱</div>
+                    <div class="info-text">
+                        <h3>Teléfono / WhatsApp</h3>
+                        <p>+595 981 964329</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">📍</div>
+                    <div class="info-text">
+                        <h3>Dirección</h3>
+                        <p>Santa Rosa 566 - Lambaré, Paraguay</p>
+                    </div>
+                </div>
+                <div class="mapa">
+                    <iframe src="https://www.google.com/maps?q=Santa+Rosa+566+Lambar%C3%A9+Paraguay&output=embed" width="100%" height="250" style="border:0;" allowfullscreen></iframe>
+                </div>
+            </div>
+            
+            <div class="formulario-contacto">
+                <h2>📝 Envíanos un mensaje</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="nombre" placeholder="Tu nombre completo" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Tu correo electrónico" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="telefono" placeholder="Tu teléfono">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="mensaje" rows="5" placeholder="¿En qué podemos ayudarte?" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-enviar">📤 Enviar mensaje</button>
+                </form>
+                <p style="margin-top: 20px; font-size: 0.8rem; color: #64748b;">Te responderemos a la brevedad.</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2025 DiGinet. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<script>
+    document.getElementById('downloadBtn').addEventListener('click', () => {
+        window.open('https://tu-enlace-externo.com/traxer-demo.zip', '_blank');
+    });
+
+    document.getElementById('contactForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const nombre = document.getElementById('nombre').value;
+        const email = document.getElementById('email').value;
+        const telefono = document.getElementById('telefono').value;
+        const mensaje = document.getElementById('mensaje').value;
+        
+        // Abre WhatsApp con el mensaje pre-cargado
+        const texto = `Hola DiGinet,%0A%0ANombre: ${nombre}%0ACorreo: ${email}%0ATeléfono: ${telefono}%0AMensaje: ${mensaje}`;
+        window.open(`https://wa.me/595981964329?text=${texto}`, '_blank');
+        
+        alert('Mensaje enviado. Te contactaremos pronto por WhatsApp.');
+        e.target.reset();
+    });
+</script>
+</body>
+</html>
